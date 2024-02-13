@@ -18,13 +18,14 @@ content=$(jq '. < env.json')
 
 # Extract properties
 hostname=$(echo $content | jq -r '.hostname')
-ipaddress=$(echo $content | jq -r '.ipaddress')
+ipaddresses=$(echo $content | jq -r '.ipaddresses')
 hosts=$(echo $content | jq -r '.hosts')
 
 # Print the properties
 echo -e "Hostname: $hostname"
-echo -e "IP Address: $ipaddress"
+echo -e "IP Addresses: $ipaddresses"
 echo -e "Hosts: $hosts"
 
 echo -e "SETTING IP ADDRESSES IN /etc/netplan/00-installer-config.yaml..."
-sed -i "s/ipaddresses: \[xxx.xxx.xxx.xxx\/xx\]/ipaddresses: $ip_address/" /etc/netplan/01-netcfg.yaml
+cp /tmp/first_runner/files/00-installer-config.yaml /etc/netplan/
+sed -i "s/ipaddresses: \[xxx.xxx.xxx.xxx\/xx\]/ipaddresses: $ip_address/" /etc/netplan/00-installer-config.yaml
