@@ -1,0 +1,12 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens33:
+      addresses:
+        - xxx.xxx.xxx.xxx/xx
+      nameservers:
+        addresses: [xxx.xxx.xxx.xxx, xxx.xxx.xxx.xxx]
+      routes:
+        - to: default
+          via: xxx.xxx.xxx.xxx
+  version: 2

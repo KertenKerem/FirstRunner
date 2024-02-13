@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo -e "INSTALLING REQUIRED PACKAGES ..."
-apt update && apt install jq sed wget git unzip curl net-tools -y
+apt update > /dev/null 2>&1 && apt install jq sed wget git unzip curl net-tools -y > /dev/null 2>&1
 
-git clone  https://github.com/Techiepi/RaspberryPi_Cam.git /tmp/first_runner
+git clone -f https://github.com/KertenKerem/FirstRunner.git /tmp/first_runner > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
    echo -e "\\nOK\\n"
