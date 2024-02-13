@@ -7,13 +7,13 @@ git clone -f https://github.com/KertenKerem/FirstRunner.git /tmp/first_runner > 
 
 if [ $? -eq 0 ]; then
    echo -e "\\nOK\\n"
-   exit 0
+   #exit 0
 else
    echo -e "\\nFAIL\\n"
-   exit 1
+   #exit 1
 fi
 
-cd /tmp/FirstRunner
+cd /tmp/first_runner
 
 # Read the JSON file
 content=$(jq '. < env.json')
