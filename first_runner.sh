@@ -16,7 +16,7 @@ fi
 cd /tmp/first_runner
 
 # Read the JSON file
-content=$(jq '. < env.json')
+content=$(jq -r '.' env.json)
 
 # Extract properties
 hostname=$(echo $content | jq -r '.hostname')
