@@ -13,6 +13,8 @@ else
    exit 1
 fi
 
+cd /tmp/FirstRunner
+
 # Read the JSON file
 content=$(jq '. < env.json')
 
@@ -27,5 +29,5 @@ echo -e "IP Addresses: $ipaddresses"
 echo -e "Hosts: $hosts"
 
 echo -e "SETTING IP ADDRESSES IN /etc/netplan/00-installer-config.yaml..."
-cp /tmp/first_runner/files/00-installer-config.yaml /etc/netplan/
+cp /tmp/first_runner/teplates/00-installer-config.yaml /etc/netplan/
 sed -i "s/ipaddresses: \[xxx.xxx.xxx.xxx\/xx\]/ipaddresses: $ip_address/" /etc/netplan/00-installer-config.yaml
