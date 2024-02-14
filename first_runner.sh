@@ -1,9 +1,10 @@
 #!/bin/bash
 
+rm -rf /tmp/first_runner
 echo -e "INSTALLING REQUIRED PACKAGES ..."
 apt update > /dev/null 2>&1 && apt install jq sed wget git unzip curl net-tools -y > /dev/null 2>&1
 
-git clone -f https://github.com/KertenKerem/FirstRunner.git /tmp/first_runner > /dev/null 2>&1
+git clone https://github.com/KertenKerem/FirstRunner.git /tmp/first_runner > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
    echo -e "\\nOK\\n"
