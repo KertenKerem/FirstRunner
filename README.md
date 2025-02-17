@@ -1,6 +1,7 @@
 ## This file using for base system configuration when TEST-Ubuntu server first.
 
 "first_runner.sh"
+
 *** Features: ***
 - Set Hostname
 - Set IP Address and name servers using /etc/netplan/00-installer-config.yaml
@@ -12,6 +13,7 @@
 - Install required base packages like wget, curl, unzip, htop, net-tools
 
 "node_exporter_installer.sh"
+
 *** Features: ***
 - Node_exporter auto installer
 - Download from github repo
