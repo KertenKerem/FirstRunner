@@ -41,7 +41,7 @@ create_user() {
 download_and_install() {
     echo "Downloading node_exporter... $NODE_EXPORTER_URL"
 pause
-    wget $NODE_EXPORTER_URL
+    wget --no-check-certificate $NODE_EXPORTER_URL
 
     echo "Extracting node_exporter..."
     tar -xzf $NODE_EXPORTER_TAR
