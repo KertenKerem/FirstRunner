@@ -1,3 +1,4 @@
+## Here I collect the scripts that automate the routine and boring tasks I do in every virtual server installation.
 ## This file using for base system configuration when TEST-Ubuntu server first.
 
 "first_runner.sh"
@@ -20,3 +21,10 @@
 - Extract and copy files
 - Create nodeexporter user and group
 - Create service file and enable service
+
+
+"dhcpTOstaticIP.py"
+
+*** Features: ***
+- It converts your DHCP-assigned IP addresses into static IP addresses and saves them as /etc/netplan/01-netcfg.yaml.
+- It also deletes the 50-cloud-init.yaml file if present.
